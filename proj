@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+mkdir -p ~/rpmbuild/{SPECS,SOURCES}
+cp /tmp/proj* ~/rpmbuild/SOURCES
+mv ~/rpmbuild/SOURCES/*.spec ~/rpmbuild/SPECS
+rpmbuild -ba ~/rpmbuild/SPECS/proj.spec
